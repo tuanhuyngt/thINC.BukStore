@@ -1,0 +1,15 @@
+﻿@using thINC.BukStore.Web.Areas.AppAreaName.Models.Layout
+@using thINC.BukStore.Web.Areas.AppAreaName.Views.Shared.Components.AppAreaNameLogo
+@model HeaderViewModel
+@{
+    Layout = null;
+}
+
+<div class="kt-header__brand kt-grid__item" id="kt_header_brand">
+    <div class="kt-header__brand-logo">
+        <a href="@Url.Action("Index", "Home", new {area = string.Empty})">
+            @await Component.InvokeAsync(typeof(AppAreaNameLogoViewComponent))
+            @await Component.InvokeAsync(typeof(AppAreaNameLogoViewComponent), new { logoClass = "kt-header__brand-logo-sticky" })
+        </a>
+    </div>
+</div>
